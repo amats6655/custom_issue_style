@@ -1,0 +1,154 @@
+@media (hover: none) and (pointer: coarse) and (orientation:portrait) {
+    /* Force table to not be like tables anymore */
+    div.autoscroll table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    div.autoscroll table {
+        empty-cells: show;
+    }
+
+    div.autoscroll table.list td.last_updated_by:before { content: "Обновил: " }
+    div.autoscroll table.list td.parent:before { content: "Родитель: " }
+    div.autoscroll table.list td.start_date:before { content: "Начало: " }
+    div.autoscroll table.list td.due_date:before { content: "Завершение: " }
+
+    div.autoscroll td {
+        /* Behave like a "row" */
+        position: relative;
+        padding-left: 40%;
+        text-align: left;
+        min-height: 1.5em;
+        text-wrap: wrap;
+    }
+
+    div.autoscroll tr.group td{
+        padding: 0 !important;
+        margin-top: 3px;
+        text-align: left;
+    }
+
+    div.autoscroll td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        left: 6px;
+        width: 40%;
+        padding-right: 10px;
+        white-space: normal;
+        overflow: hidden;
+        font-weight: 600;
+    }
+
+    div.autoscroll td.subject:before{
+        display: none;
+    }
+
+    /* Стили для мобильных устройств */
+    div.autoscroll table {
+        border-width: 0 !important;
+    }
+
+    div.autoscroll .issues tr {
+        border-radius: 15px;
+        padding-bottom: 10px;
+    }
+
+    /* Скрываем заголовки таблицы */
+    div.autoscroll .issues thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    div.autoscroll .issues tr {
+        display: grid;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ddd;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    /* Ячейки */
+    div.autoscroll .issues td {
+        flex: 1 1 50%; /* Две ячейки в строке */
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        box-sizing: border-box;
+        border: none !important;
+        text-align: left;
+    }
+
+    div.autoscroll td.checkbox{
+        display: none;
+    }
+
+    div.autoscroll td.subject {
+        order: 1 !important;
+        margin: 10px 0 10px 0;
+        padding-left: 6px !important;
+        font-weight: bold;
+        color: #333;
+    }
+
+    div.autoscroll td {
+        order: 2;
+    }
+
+    div#content {
+        font-size: 16px !important;
+    }
+
+    div.autoscroll a.toggle-all{
+        font-size: 8px;
+    }
+
+    p .buttons a * {
+        /*background-color: red;*/
+    }
+
+    fieldset table{
+        display: table-row-group;
+    }
+
+    fieldset table tr{
+        display: table-row;
+    }
+
+    div .dropdown.nav.pull-right{
+        display: none !important;
+    }
+
+    #content .contextual a.icon {
+        min-width: 97%;
+        font-size: 18px;
+        text-align: center;
+        padding: 10px 25px;
+        border: none;
+    }
+
+    h2 {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+
+
+    div.contextual.cm_contextual{
+        background-color: rgba(147,185,108,0.40);
+        border-radius: 15px;
+    }
+
+    a.icon-add.new-issue span{
+        border: none !important;
+    }
+
+    tr span.expander{
+        margin-right: 20px;
+        margin-left: 10px !important;
+    }
+}

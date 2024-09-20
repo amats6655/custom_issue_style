@@ -1,0 +1,50 @@
+<% custom_field_id = 241 %>
+<% if Setting.plugin_custom_issue_style['enable_styles'] == 'true' %>
+	<% display_mode = Setting.plugin_custom_issue_style['display_mode'] %>
+	<% if display_mode == 'all_users' || (display_mode == 'admin_only' && User.current.admin?) %>
+		<% if User.current.custom_field_value(custom_field_id) == '1' %>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+			// Создаем элемент <style> и добавляем его в <head>
+				var customStyles = `<%= raw(Setting.plugin_custom_issue_style['issue_detail_styles']) %>`;
+				var styleElement = document.createElement('style');
+				styleElement.innerHTML = customStyles;
+				document.head.appendChild(styleElement);
+				if (/Mobi|Android/i.test(navigator.userAgent)) {
+					var attributeDivs = document.querySelectorAll('div.attribute');
+					attributeDivs.forEach(function(div) {
+						var valueDiv = div.querySelector('div.value');
+						if (valueDiv) {
+							if (!valueDiv.textContent.trim()) {
+								div.style.display = 'none';
+							}
+						}
+					});
+					var pdata = document.querySelectorAll('p');
+					pdata.forEach(function(label) {
+						var required = label.querySelector('span.required');
+						if (required) {
+							var input = label.querySelector('input');
+							if (input != null) {
+								// Начальная установка красной границы
+								input.style.borderColor = 'red';
+
+								// Добавляем обработчик события input для изменения границы
+								input.addEventListener('input', function() {
+									if (input.value.trim() !== '') {
+										// Убираем красную границу, если поле заполнено
+										input.style.borderColor = '';
+									} else {
+										// Снова добавляем красную границу, если поле пустое
+										input.style.borderColor = 'red';
+									}
+								});
+							}
+						}
+					});
+			}
+		});
+		</script>
+		<% end%>
+	<% end %>
+<% end %>

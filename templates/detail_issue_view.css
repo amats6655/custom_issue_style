@@ -1,0 +1,159 @@
+@media (hover: none) and (pointer: coarse) and (orientation:portrait) {
+
+    div#content {
+        font-size: 16px !important;
+    }
+
+    div#button_bar.H.button_bar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div#button_bar.H.button_bar * {
+        font-size: 16px;
+        flex: 45%;
+        min-height: 100%;
+        height: 3em;
+        align-content: center;
+    }
+
+    span.lu_button_main {
+        align-content: center;
+    }
+
+    div.next-prev-links.contextual{
+        display: none;
+    }
+
+    div.issue h3{
+        font-size: 20px;
+    }
+
+    /* Основной стиль для select */
+    select {
+        display: block;
+        width: 100% !important;
+        padding: 5px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 15px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        box-sizing: border-box;
+    }
+
+    /* Стили для hover и focus */
+
+    select:focus {
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+    }
+
+    /* Упрощенные стили для старых браузеров */
+    select::-ms-expand {
+        display: none;
+    }
+
+    /* Стиль для стрелки в select */
+    select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23495057' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 8px 10px;
+        padding-right: 30px;
+    }
+
+    div.lu_form_bottom_buttons input {
+        width: 49%;
+        height: 4lvh;
+    }
+
+    form#issue-form input[type="submit"]{
+        width: 49%;
+        height: 4lvh;
+    }
+
+    button#lu_button_bar_btn{
+        width: 100%;
+        height: 4lvh;
+        border-radius: 10px;
+        background-color: #dedede;
+        font-size: 16px !important;
+    }
+
+    .admin-menu-luxury-buttons-graph{
+        background-image: none !important;
+    }
+
+    .alignrigth{
+        display:none !important;
+    }
+
+    a.icon.icon-attachment.no_line{
+        background-image: none !important;
+        margin-left: -20px;
+    }
+
+    div.attachments td{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    div.attachments {
+        margin-top: 5lvh;
+    }
+
+    a.delete.icon-only.icon-del{
+        display: none
+    }
+
+    div.splitcontent * {
+        margin-bottom: 5px;
+    }
+
+    #content > .contextual {
+        display:none;
+    }
+
+    #content > .cm_contextual {
+        display:none;
+    }
+
+    input[type="text"] {
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -khtml-border-radius: 3px;
+        background: #ffffff !important;
+        outline: none;
+        height: 30px;
+        min-width: 100%;
+    }
+
+    div.period_picker_input{
+        min-height: 40px;
+        padding-top: 5px;
+        min-width: 100%;
+        font-size: 16px;
+    }
+
+    span.lu_button_main{
+        border: none;
+        display: contents;
+    }
+
+    .cke_browser_ios .cke_contents{
+        overflow-y: clip;
+    }
+
+}

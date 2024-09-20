@@ -1,0 +1,19 @@
+<p>
+  <label for="custom_issue_style_enable_styles"><%= l(:label_enable_styles) %>:</label>
+  <%= check_box_tag 'settings[enable_styles]', 'true', Setting.plugin_custom_issue_style['enable_styles'] == 'true' %>
+</p>
+
+<p>
+  <label for="custom_issue_style_display_mode"><%= l(:label_display_mode) %>:</label>
+  <%= select_tag 'settings[display_mode]', options_for_select([['Только администратор', 'admin_only'], ['Все пользователи', 'all_users']], Setting.plugin_custom_issue_style['display_mode']) %>
+</p>
+
+<p>
+  <label for="mobile_issue_detail_styles"><%= l(:label_issue_detail_styles) %>:</label><br>
+  <%= text_area_tag 'settings[issue_detail_styles]', Setting.plugin_custom_issue_style['issue_detail_styles'], rows: 10, cols: 70 %>
+</p>
+
+<p>
+  <label for="mobile_issue_list_styles"><%= l(:label_issue_list_styles) %>:</label><br>
+  <%= text_area_tag 'settings[issue_list_styles]', Setting.plugin_custom_issue_style['issue_list_styles'], rows: 10, cols: 70 %>
+</p>

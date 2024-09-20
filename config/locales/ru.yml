@@ -1,0 +1,6 @@
+ru:
+  field_id    : "id"
+  label_enable_styles: "Включить стили"
+  label_display_mode: "Режим отображения"
+  label_issue_detail_styles: "Стиль для детального описания заявки"
+  label_issue_list_styles: "Стиль для списка заявок"
