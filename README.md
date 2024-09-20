@@ -1,5 +1,7 @@
 # Custom Issue Style Plugin for Redmine
 
+![GitHub repo size](https://img.shields.io/github/repo-size/amats6655/custom_issue_style) ![GitHub issues](https://img.shields.io/github/issues/amats6655/custom_issue_style)
+
 ## Описание
 Плагин **Custom Issue Style** позволяет пользователям переопределять стили отображения заявок в интерфейсе Redmine. 
 Он предоставляет возможность настройки стилей для детального описания заявки и списка заявок, а также управлять отображением 
